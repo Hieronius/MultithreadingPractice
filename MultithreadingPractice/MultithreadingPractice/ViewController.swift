@@ -7,13 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController {
+    
+    private func randomD6() -> Int {
+        let result = Int.random(in: 1...6)
+        print(result)
+        return result
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        async {
+            randomD6()
+        }
     }
-
-
 }
 
